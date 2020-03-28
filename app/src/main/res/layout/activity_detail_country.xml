@@ -10,7 +10,7 @@
         android:id="@+id/imageView"
         android:layout_width="173dp"
         android:layout_height="141dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="116dp"
         android:layout_marginRight="116dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         android:layout_marginTop="223dp"
         android:layout_marginEnd="300dp"
         android:layout_marginRight="300dp"
-        android:text="TextView"
+        android:text="Total case : "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,10 +32,10 @@
         android:id="@+id/newCase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:text="TextView"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginRight="308dp"
+        android:text="New case :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalCase" />
 
@@ -43,10 +43,10 @@
         android:id="@+id/totalDead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:text="TextView"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="272dp"
+        android:layout_marginRight="272dp"
+        android:text="Total recovered :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newCase" />
 
@@ -54,10 +54,10 @@
         android:id="@+id/newDead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:text="TextView"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginRight="276dp"
+        android:text="New recovered :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalDead" />
 
@@ -68,7 +68,7 @@
         android:layout_marginTop="41dp"
         android:layout_marginEnd="300dp"
         android:layout_marginRight="300dp"
-        android:text="TextView"
+        android:text="Total death :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newDead" />
 
@@ -79,7 +79,7 @@
         android:layout_marginTop="38dp"
         android:layout_marginEnd="300dp"
         android:layout_marginRight="300dp"
-        android:text="TextView"
+        android:text="New death :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalRecovered" />
 
@@ -87,10 +87,82 @@
         android:id="@+id/breturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="163dp"
-        android:layout_marginRight="163dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:layout_marginBottom="16dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/pays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginRight="177dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/nTotalCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pays" />
+
+    <TextView
+        android:id="@+id/nNewCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nTotalCase" />
+
+    <TextView
+        android:id="@+id/nTotalRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nNewCase" />
+
+    <TextView
+        android:id="@+id/nNewRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nTotalRecovered" />
+
+    <TextView
+        android:id="@+id/nTotalDeath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nNewRecovered" />
+
+    <TextView
+        android:id="@+id/nNewDeath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nTotalDeath" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

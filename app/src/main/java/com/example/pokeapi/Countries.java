@@ -5,8 +5,8 @@ public class Countries {
     private String Slug;
     private Integer NewConfirmed;
     private Integer TotalConfirmed;
-    private Integer NewDeath;
-    private Integer TotalDeath;
+    private Integer NewDeaths;
+    private Integer TotalDeaths;
     private Integer NewRecovered;
     private Integer TotalRecovered;
 
@@ -27,11 +27,11 @@ public class Countries {
     }
 
     public void setNewDeath(Integer newDeath) {
-        NewDeath = newDeath;
+        NewDeaths = newDeath;
     }
 
     public void setTotalDeath(Integer totalDeath) {
-        TotalDeath = totalDeath;
+        TotalDeaths = totalDeath;
     }
 
     public void setNewRecovered(Integer newRecovered) {
@@ -59,11 +59,11 @@ public class Countries {
     }
 
     public Integer getNewDeath() {
-        return NewDeath;
+        return NewDeaths;
     }
 
     public Integer getTotalDeath() {
-        return TotalDeath;
+        return TotalDeaths;
     }
 
     public Integer getNewRecovered() {
