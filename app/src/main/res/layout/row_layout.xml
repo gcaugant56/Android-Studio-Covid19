@@ -12,7 +12,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="6dip"
         android:contentDescription="TODO"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher"
+        android:onClick="onClick"
+        android:clickable="true"/>
 
     <TextView
         android:id="@+id/secondLine"
@@ -37,6 +39,7 @@
         android:layout_toRightOf="@id/icon"
         android:gravity="center_vertical"
         android:text="Example application"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        />
 
 </RelativeLayout>

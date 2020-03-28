@@ -15,7 +15,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_country);
-        breturn = (Button) findViewById(R.id.recycler_view);
+        breturn = (Button) findViewById(R.id.breturn);
 
         breturn.setOnClickListener(new View.OnClickListener() {
 
