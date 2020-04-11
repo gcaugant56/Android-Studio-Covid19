@@ -14,7 +14,5 @@ public class ViewHolder extends RecyclerView.ViewHolder{
         super(v);
         layout = v;
         txtHeader = (TextView) v.findViewById(R.id.firstLine);
-        txtFooter = (TextView) v.findViewById(R.id.secondLine);
-        image = (ImageView) v.findViewById(R.id.icon);
     }
 }
