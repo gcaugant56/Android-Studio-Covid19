@@ -1,5 +1,4 @@
-package com.example.pokeapi;
-
+package com.example.COVID;
 import java.util.List;
 
 public class RestAllCountry {
