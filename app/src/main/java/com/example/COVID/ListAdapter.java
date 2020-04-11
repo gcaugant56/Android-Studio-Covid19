@@ -47,7 +47,7 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         final Countries currentCountry = values.get(position);
-        holder.txtHeader.setText(currentCountry.toString());
+        holder.txtHeader.setText(currentCountry.getCountry());
         holder.txtHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

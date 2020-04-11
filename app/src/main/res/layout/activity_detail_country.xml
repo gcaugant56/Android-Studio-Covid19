@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="173dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginRight="116dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
-
     <TextView
         android:id="@+id/totalCase"
         android:layout_width="wrap_content"
@@ -90,7 +79,7 @@
         android:layout_marginEnd="160dp"
         android:layout_marginRight="160dp"
         android:layout_marginBottom="16dp"
-        android:text="Button"
+        android:text="Retour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -98,71 +87,71 @@
         android:id="@+id/pays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginRight="177dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nTotalCase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_marginTop="223dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pays" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nNewCase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginTop="278dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nTotalCase" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nTotalRecovered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginTop="333dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nNewCase" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nNewRecovered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nTotalRecovered" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nTotalDeath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nNewRecovered" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nNewDeath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nTotalDeath" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
