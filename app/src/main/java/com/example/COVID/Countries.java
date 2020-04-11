@@ -1,4 +1,4 @@
-package com.example.pokeapi;
+package com.example.COVID;
 
 public class Countries {
     private String Country;

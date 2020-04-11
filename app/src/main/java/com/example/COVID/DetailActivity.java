@@ -1,4 +1,4 @@
-package com.example.pokeapi;
+package com.example.COVID;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;

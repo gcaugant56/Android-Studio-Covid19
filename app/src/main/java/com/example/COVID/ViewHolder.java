@@ -1,4 +1,4 @@
-package com.example.pokeapi;
+package com.example.COVID;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;

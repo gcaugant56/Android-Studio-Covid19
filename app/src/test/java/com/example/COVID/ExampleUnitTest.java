@@ -1,4 +1,4 @@
-package com.example.pokeapi;
+package com.example.COVID;
 
 import org.junit.Test;
 

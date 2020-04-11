@@ -1,4 +1,4 @@
-package com.example.pokeapi;
+package com.example.COVID;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
