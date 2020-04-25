@@ -1,4 +1,4 @@
-package com.example.COVID;
+package com.example.COVID.Modele;
 
 public class GlobalStats {
     int NewConfirmed;

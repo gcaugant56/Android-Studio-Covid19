@@ -1,4 +1,4 @@
-package com.example.COVID;
+package com.example.COVID.Modele;
 import java.util.List;
 
 public class RestAllCountry {
