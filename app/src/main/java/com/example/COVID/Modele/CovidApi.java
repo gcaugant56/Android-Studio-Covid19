@@ -1,4 +1,4 @@
-package com.example.COVID;
+package com.example.COVID.Modele;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,13 +1,16 @@
-package com.example.COVID;
+package com.example.COVID.Controleur;
 
 import android.content.Context;
 import android.content.Intent;
-import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.COVID.Modele.Countries;
+import com.example.COVID.R;
+import com.example.COVID.Vue.DetailActivity;
 
 import java.util.List;
 
@@ -51,7 +54,7 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-                Intent intent = new Intent(context,DetailActivity.class);
+                Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("TotalCase",currentCountry.getTotalConfirmed());
                 intent.putExtra("NewCase",currentCountry.getNewConfirmed());
                 intent.putExtra("TotalDead",currentCountry.getTotalDeath());

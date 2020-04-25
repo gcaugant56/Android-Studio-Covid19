@@ -1,7 +1,5 @@
-package com.example.COVID;
+package com.example.COVID.Vue;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,14 +7,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.COVID.Modele.Countries;
+import com.example.COVID.Modele.CovidApi;
+import com.example.COVID.Modele.GlobalStats;
+import com.example.COVID.Controleur.ListAdapter;
+import com.example.COVID.R;
+import com.example.COVID.Modele.RestAllCountry;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
