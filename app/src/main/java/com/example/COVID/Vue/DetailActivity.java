@@ -1,14 +1,11 @@
 package com.example.COVID.Vue;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.COVID.R;
 
 public class DetailActivity extends AppCompatActivity {
@@ -21,6 +18,7 @@ public class DetailActivity extends AppCompatActivity {
     private TextView newRecovered;
     private TextView Pays;
     private ImageView flag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +39,20 @@ public class DetailActivity extends AppCompatActivity {
         newDead.setText(String.valueOf(intent.getIntExtra("NewDead",0)));
         totalRecovered.setText(String.valueOf(intent.getIntExtra("TotalRecovered",0)));
         newRecovered.setText(String.valueOf(intent.getIntExtra("NewRecovered",0)));
-        Pays.setText(intent.getStringExtra("Pays"));
-        flag.setImageResource(R.drawable.afghanistan);
         String nation = intent.getStringExtra("Pays");
-        nation.replaceAll(" ","");
-        nation.toLowerCase();
+        Pays.setText(nation);
+        nation = nation.replaceAll(" ","");
+        int id = getResources().getIdentifier(nation.toLowerCase(), "drawable", DetailActivity.this.getPackageName());
+        if(id == 0 )
+        {
+            flag.setImageResource(R.drawable.global);
 
+        }
+        else
+        {
+            flag.setImageResource(id);
+        }
         breturn = (Button) findViewById(R.id.breturn);
-
         breturn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
