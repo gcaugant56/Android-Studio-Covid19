@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 if(response.isSuccessful() && response.body() != null)
                 {
                     GlobalStats globalStats = response.body().getGlobalStats();
-                    Countries global = new Countries("Global Stats", globalStats.getNewConfirmed(), globalStats.getTotalConfirmed(),globalStats.getNewDeaths(),globalStats.getTotalDeaths(),globalStats.getNewRecovered(),globalStats.getTotalRecovered());
+                    Countries global = new Countries("Slug","Global Stats", globalStats.getNewConfirmed(), globalStats.getTotalConfirmed(),globalStats.getNewDeaths(),globalStats.getTotalDeaths(),globalStats.getNewRecovered(),globalStats.getTotalRecovered());
                     countries.add(global);
                     for (Countries country : response.body().getCountries())
                     {

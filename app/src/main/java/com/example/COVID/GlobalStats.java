@@ -8,6 +8,15 @@ public class GlobalStats {
     int NewRecovered;
     int TotalRecovered;
 
+    public GlobalStats(int newConfirmed, int totalConfirmed, int newDeaths, int totalDeaths, int newRecovered, int totalRecovered) {
+        NewConfirmed = newConfirmed;
+        TotalConfirmed = totalConfirmed;
+        NewDeaths = newDeaths;
+        TotalDeaths = totalDeaths;
+        NewRecovered = newRecovered;
+        TotalRecovered = totalRecovered;
+    }
+
     public void setNewConfirmed(int newConfirmed) {
         NewConfirmed = newConfirmed;
     }
