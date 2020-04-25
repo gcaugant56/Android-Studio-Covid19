@@ -1,5 +1,7 @@
 package com.example.COVID;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,7 +13,10 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,7 +25,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-
+    ArrayList<Countries> countries = new ArrayList<Countries>();
     private RecyclerView recyclerView;
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -66,7 +71,13 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<RestAllCountry> call, Response<RestAllCountry> response) {
                 if(response.isSuccessful() && response.body() != null)
                 {
-                    List<Countries> countries = response.body().getCountries();
+                    GlobalStats globalStats = response.body().getGlobalStats();
+                    Countries global = new Countries("Global Stats", globalStats.getNewConfirmed(), globalStats.getTotalConfirmed(),globalStats.getNewDeaths(),globalStats.getTotalDeaths(),globalStats.getNewRecovered(),globalStats.getTotalRecovered());
+                    countries.add(global);
+                    for (Countries country : response.body().getCountries())
+                    {
+                        countries.add(country);
+                    }
                     Toast.makeText(getApplicationContext(),"Api OK", Toast.LENGTH_SHORT).show();
                     ShowList(countries);
                 }

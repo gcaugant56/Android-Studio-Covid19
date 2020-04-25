@@ -2,6 +2,7 @@ package com.example.COVID;
 
 import android.content.Context;
 import android.content.Intent;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,6 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
     private List<Countries> values;
-
-
 
     public void add(int position, Countries item) {
         values.add(position, item);

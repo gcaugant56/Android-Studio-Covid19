@@ -10,6 +10,16 @@ public class Countries {
     private Integer NewRecovered;
     private Integer TotalRecovered;
 
+    public Countries(String Country, int newConfirmed, int totalConfirmed, int newDeaths, int totalDeaths, int newRecovered, int totalRecovered)
+    {
+        this.Country = Country;
+        this.NewConfirmed = newConfirmed;
+        this.TotalConfirmed = totalConfirmed;
+        this.NewDeaths = newDeaths;
+        this.TotalDeaths = totalDeaths;
+        this.NewRecovered = newRecovered;
+        this.TotalRecovered = totalRecovered;
+    }
     public void setCountry(String country) {
         Country = country;
     }

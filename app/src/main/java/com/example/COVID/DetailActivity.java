@@ -4,13 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
+
+import java.io.File;
 
 public class DetailActivity extends AppCompatActivity {
     private Button breturn;
@@ -21,7 +28,7 @@ public class DetailActivity extends AppCompatActivity {
     private TextView totalRecovered;
     private TextView newRecovered;
     private TextView Pays;
-
+    private ImageView flag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +41,7 @@ public class DetailActivity extends AppCompatActivity {
         newRecovered = (TextView) findViewById(R.id.nNewRecovered);
         newDead = (TextView) findViewById(R.id.nNewDeath);
         Pays = (TextView) findViewById(R.id.pays);
+        flag = (ImageView) findViewById(R.id.imageView);
 
         totalCase.setText(String.valueOf(intent.getIntExtra("TotalCase",0)));
         newCase.setText(String.valueOf(intent.getIntExtra("NewCase",0)));
@@ -42,7 +50,10 @@ public class DetailActivity extends AppCompatActivity {
         totalRecovered.setText(String.valueOf(intent.getIntExtra("TotalRecovered",0)));
         newRecovered.setText(String.valueOf(intent.getIntExtra("NewRecovered",0)));
         Pays.setText(intent.getStringExtra("Pays"));
-
+        flag.setImageResource(R.drawable.afghanistan);
+        String nation = intent.getStringExtra("Pays");
+        nation.replaceAll(" ","");
+        nation.toLowerCase();
 
         breturn = (Button) findViewById(R.id.breturn);
 
