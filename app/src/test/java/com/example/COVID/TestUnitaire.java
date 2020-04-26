@@ -1,5 +1,8 @@
 package com.example.COVID;
 
+import com.example.COVID.Modele.Countries;
+import com.example.COVID.Modele.GlobalStats;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

@@ -24,6 +24,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_country);
         Intent intent = getIntent();
+        String nation;
         totalCase = (TextView) findViewById(R.id.nTotalCase);
         totalRecovered = (TextView) findViewById(R.id.nTotalRecovered);
         totalDead = (TextView) findViewById(R.id.nTotalDeath);
@@ -39,15 +40,6 @@ public class DetailActivity extends AppCompatActivity {
         newDead.setText(String.valueOf(intent.getIntExtra("NewDead",0)));
         totalRecovered.setText(String.valueOf(intent.getIntExtra("TotalRecovered",0)));
         newRecovered.setText(String.valueOf(intent.getIntExtra("NewRecovered",0)));
-        String nation = intent.getStringExtra("Pays");
-        Pays.setText(nation);
-        nation = nation.replaceAll(" ","");
-        int id = getResources().getIdentifier(nation.toLowerCase(), "drawable", DetailActivity.this.getPackageName());
-        if(id == 0 )
-        {
-            flag.setImageResource(R.drawable.global);
-        Pays.setText(intent.getStringExtra("Pays"));
-        flag.setImageResource(R.drawable.afghanistan);
         if(intent.getStringExtra("Pays") != null)
         {
             nation =intent.getStringExtra("Pays") ;
@@ -56,14 +48,18 @@ public class DetailActivity extends AppCompatActivity {
         {
             nation = "";
         }
-        nation.replaceAll(" ","");
-        nation.toLowerCase();
-
+        Pays.setText(nation);
+        nation = nation.replaceAll(" ","");
+        int id = getResources().getIdentifier(nation.toLowerCase(), "drawable", DetailActivity.this.getPackageName());
+        if(id == 0 )
+        {
+            flag.setImageResource(R.drawable.global);
         }
         else
         {
             flag.setImageResource(id);
         }
+
         breturn = (Button) findViewById(R.id.breturn);
         breturn.setOnClickListener(new View.OnClickListener() {
 
