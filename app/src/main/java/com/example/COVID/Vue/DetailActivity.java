@@ -46,6 +46,18 @@ public class DetailActivity extends AppCompatActivity {
         if(id == 0 )
         {
             flag.setImageResource(R.drawable.global);
+        Pays.setText(intent.getStringExtra("Pays"));
+        flag.setImageResource(R.drawable.afghanistan);
+        if(intent.getStringExtra("Pays") != null)
+        {
+            nation =intent.getStringExtra("Pays") ;
+        }
+        else
+        {
+            nation = "";
+        }
+        nation.replaceAll(" ","");
+        nation.toLowerCase();
 
         }
         else
