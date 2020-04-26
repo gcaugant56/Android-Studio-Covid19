@@ -32,6 +32,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String nation = " ";
         setContentView(R.layout.activity_detail_country);
         Intent intent = getIntent();
         totalCase = (TextView) findViewById(R.id.nTotalCase);
@@ -51,7 +52,14 @@ public class DetailActivity extends AppCompatActivity {
         newRecovered.setText(String.valueOf(intent.getIntExtra("NewRecovered",0)));
         Pays.setText(intent.getStringExtra("Pays"));
         flag.setImageResource(R.drawable.afghanistan);
-        String nation = intent.getStringExtra("Pays");
+        if(intent.getStringExtra("Pays") != null)
+        {
+            nation =intent.getStringExtra("Pays") ;
+        }
+        else
+        {
+            nation = "";
+        }
         nation.replaceAll(" ","");
         nation.toLowerCase();
 
