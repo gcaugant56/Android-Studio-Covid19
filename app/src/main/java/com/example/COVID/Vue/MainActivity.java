@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -15,7 +17,9 @@ import com.example.COVID.R;
 import com.example.COVID.Modele.RestAllCountry;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,15 +35,45 @@ public class MainActivity extends AppCompatActivity {
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private static final String BASE_URL = "https://api.covid19api.com/";
+    private SharedPreferences sharedPreference;
+    private Gson gson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedPreference = getSharedPreferences("json-Covid-19", Context.MODE_PRIVATE);
+        gson = new GsonBuilder()
+                .setLenient()
+                .create();
         makeApiCall();
+        List<Countries> countries = getDataFromCache();
 
+        if(countries != null)
+        {
+            ShowList(countries);
+        }
+        else
+        {
+            makeApiCall();
+        }
+    }
+
+    private List<Countries> getDataFromCache()
+    {
+        String json = sharedPreference.getString("json-Covid-19",null);
+        if(json == null)
+        {
+            return null;
+        }
+        else
+        {
+            Type listCountries = new TypeToken<List<Countries>>(){}.getType();
+            return gson.fromJson(json, listCountries);
+        }
 
     }
+
     private void ShowList(List<Countries> listCountries)
     {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -55,9 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void makeApiCall()
     {
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -80,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                         countries.add(country);
                     }
                     Toast.makeText(getApplicationContext(),"Api OK", Toast.LENGTH_SHORT).show();
+                    saveList(countries);
                     ShowList(countries);
                 }
                 else
@@ -95,6 +127,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void saveList(ArrayList<Countries> countries) {
+        String jsonSaved = gson.toJson(countries);
+        sharedPreference
+                .edit()
+                .putString("json-Covid-19",jsonSaved)
+                .apply();
+        Toast.makeText(getApplicationContext(),"Données sauvegardées",Toast.LENGTH_LONG).show();
     }
 
     private void showError() {
