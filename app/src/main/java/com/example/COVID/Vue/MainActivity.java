@@ -110,6 +110,10 @@ public class MainActivity extends AppCompatActivity {
                     {
                         countries.add(country);
                     }
+
+                    //je recupere la localisation je determiune le pays du gars
+                    //j'isole mon objet du correspond au pays du gars
+                    //je le met au debut de la liste sous le nom de Current nation
                     Toast.makeText(getApplicationContext(),"Api OK", Toast.LENGTH_SHORT).show();
                     saveList(countries);
                     ShowList(countries);
