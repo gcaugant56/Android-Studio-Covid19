@@ -61,7 +61,15 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
                 intent.putExtra("NewDead",currentCountry.getNewDeath());
                 intent.putExtra("TotalRecovered",currentCountry.getTotalRecovered());
                 intent.putExtra("NewRecovered",currentCountry.getNewRecovered());
-                intent.putExtra("Pays",currentCountry.getCountry());
+                if(currentCountry.getCountry() == "Your location")
+                {
+                    intent.putExtra("Pays",currentCountry.getSlug());
+
+                }
+                else
+                {
+                    intent.putExtra("Pays",currentCountry.getCountry());
+                }
                 context.startActivity(intent);
             }
         });
