@@ -53,6 +53,7 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.txtHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Context context = v.getContext();
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("TotalCase",currentCountry.getTotalConfirmed());
@@ -61,7 +62,15 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
                 intent.putExtra("NewDead",currentCountry.getNewDeath());
                 intent.putExtra("TotalRecovered",currentCountry.getTotalRecovered());
                 intent.putExtra("NewRecovered",currentCountry.getNewRecovered());
-                intent.putExtra("Pays",currentCountry.getCountry());
+                if(currentCountry.getCountry() == "Your location")
+                {
+                    intent.putExtra("Pays",currentCountry.getSlug());
+
+                }
+                else
+                {
+                    intent.putExtra("Pays",currentCountry.getCountry());
+                }
                 context.startActivity(intent);
             }
         });
