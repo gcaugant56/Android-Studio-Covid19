@@ -10,8 +10,9 @@ public class Countries {
     private Integer NewRecovered;
     private Integer TotalRecovered;
 
-    public Countries(String Country, int newConfirmed, int totalConfirmed, int newDeaths, int totalDeaths, int newRecovered, int totalRecovered)
+    public Countries(String Slug, String Country, int newConfirmed, int totalConfirmed, int newDeaths, int totalDeaths, int newRecovered, int totalRecovered)
     {
+        this.Slug = Slug;
         this.Country = Country;
         this.NewConfirmed = newConfirmed;
         this.TotalConfirmed = totalConfirmed;
@@ -60,29 +61,30 @@ public class Countries {
         return Slug;
     }
 
-    public Integer getNewConfirmed() {
+    public int getNewConfirmed() {
         return NewConfirmed;
     }
 
-    public Integer getTotalConfirmed() {
+    public int getTotalConfirmed() {
         return TotalConfirmed;
     }
 
-    public Integer getNewDeath() {
+    public int getNewDeath() {
         return NewDeaths;
     }
 
-    public Integer getTotalDeath() {
+    public int getTotalDeath() {
         return TotalDeaths;
     }
 
-    public Integer getNewRecovered() {
+    public int getNewRecovered() {
         return NewRecovered;
     }
 
-    public Integer getTotalRecovered() {
+    public int getTotalRecovered() {
         return TotalRecovered;
     }
+
     public String toString(){
         return this.Country +"\nNew Confirmed : "+this.getNewConfirmed()+"\nTotal Confirmed :"+getTotalConfirmed();
     }
