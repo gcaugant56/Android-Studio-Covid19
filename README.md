@@ -18,6 +18,7 @@ Ouvrir le projet dans Android studio (ne pas l'importé)
 - Création de l'écran detaillant l'état des pays
 - Ajout du global stats, qui récupere les stats du COVIS-19 a l'échelle mondial
 - Ajout des drapeaux pour chaque pays
+
 2.00 : 
 - Ajout de la géolocalisation de l'utilisateur
 - Ajout de la case "Your location" permettant d'afficher les statistiques du COVID-19 dans le pays dans lequel ce trouve l'utilisateur
