@@ -2,6 +2,7 @@
 
 git clone https://github.com/gcaugant56/Android-Studio-Covid19.git
 Ouvrir le projet dans Android studio (ne pas l'importé)
+
 ---
 ## Installation
 ---
