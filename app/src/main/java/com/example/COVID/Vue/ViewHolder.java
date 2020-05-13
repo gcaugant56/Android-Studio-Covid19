@@ -1,4 +1,4 @@
-package com.example.COVID.Controleur;
+package com.example.COVID.Vue;
 import android.view.View;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;

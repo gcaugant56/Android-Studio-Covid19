@@ -1,4 +1,4 @@
-package com.example.COVID.Controleur;
+package com.example.COVID.Vue;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.COVID.Modele.Countries;
 import com.example.COVID.R;
-import com.example.COVID.Vue.DetailActivity;
 
 import java.util.List;
 
@@ -43,14 +42,11 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
         final Countries currentCountry = values.get(position);
         holder.txtHeader.setText(currentCountry.getCountry());
-        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
@@ -64,7 +60,6 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
                 if(currentCountry.getCountry() == "Your location")
                 {
                     intent.putExtra("Pays",currentCountry.getSlug());
-
                 }
                 else
                 {
