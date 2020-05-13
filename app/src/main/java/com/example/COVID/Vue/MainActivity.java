@@ -117,8 +117,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<RestAllCountry> call, Response<RestAllCountry> response) {
                 String location = getlocation();
-                Countries loc = null;
-
+                boolean find = false;
                 if(response.isSuccessful() && response.body() != null)
                 {
                     GlobalStats globalStats = response.body().getGlobalStats();
@@ -126,13 +125,18 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<Countries> temp = new ArrayList<Countries>();
                     temp.add(global);
                     for (Countries country : response.body().getCountries()) {
-                        if(country.getCountry().contains(location))
+                        if(location != null )
                         {
-                            loc = new Countries(country.getCountry(),"Your location",country.getNewConfirmed(),country.getTotalConfirmed(),country.getNewDeath(),country.getTotalDeath(),country.getNewRecovered(),country.getTotalRecovered());
+                            if(country.getCountry().contains(location) && find == false)
+                            {
+                                Countries loc = new Countries(country.getCountry(),"Your location",country.getNewConfirmed(),country.getTotalConfirmed(),country.getNewDeath(),country.getTotalDeath(),country.getNewRecovered(),country.getTotalRecovered());
+                                countries.add(loc);
+                                find = true;
+                            }
+
                         }
                         temp.add(country);
                     }
-                    countries.add(loc);
                     for (Countries country : temp)
                     {
                         countries.add(country);
