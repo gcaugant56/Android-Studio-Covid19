@@ -33,6 +33,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.COVID.Constants.CovidKey;
+
 public class MainController {
     private ArrayList<Countries> countries = new ArrayList<Countries>();
     private SharedPreferences sharedPreference;
@@ -113,7 +115,7 @@ public class MainController {
     }
     private List<Countries> getDataFromCache()
     {
-        String json = sharedPreference.getString("COVID",null);
+        String json = sharedPreference.getString(CovidKey,null);
         if(json == null)
         {
             return null;
@@ -129,7 +131,7 @@ public class MainController {
         String jsonSaved = gson.toJson(countries);
         sharedPreference
                 .edit()
-                .putString(Constants.CovidKey,jsonSaved)
+                .putString(CovidKey,jsonSaved)
                 .apply();
         Toast.makeText(view.getApplicationContext(),"Data saved",Toast.LENGTH_LONG).show();
     }
