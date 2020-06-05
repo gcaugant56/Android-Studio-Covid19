@@ -19,14 +19,14 @@ Ouvrir le projet dans Android studio (ne pas l'importé)
 
 Au démarrage l'application va demander l'accès a la géolocalisation du téléphone afin de proposer les statistiques du pays ou se trouve l'utilisateur: 
 
-
+ ![alt text](https://github.com/gcaugant56/Android-Studio-Covid19/blob/master/Authorize.png) 
 
 
 
 
 Il est possible de validé que la permission a bien été accorder:
 
-
+ ![alt text](https://github.com/gcaugant56/Android-Studio-Covid19/blob/master/Validation.png) 
 
 
 
@@ -35,18 +35,18 @@ Le serveur va nous réponse un json, une liste de pays et les statistiques liée
 
 Nous allons donc arrivé sur cet écran : 
 
-
+ ![alt text](https://github.com/gcaugant56/Android-Studio-Covid19/blob/master/Your%20location.png) 
 
 Global stats correspond au statistique  mondial et Your location au statistique  du pays ou se trouve l'utilisateur. Sur l'appuie d'un des élément nous allons être rediriger vers un écran de détail : 
 
 
-
+ ![alt text](https://github.com/gcaugant56/Android-Studio-Covid19/blob/master/Details.png) 
 
 
 Dans les cas ou nous choissisons globals stats ou un pays ou le drapeau n'est pas renseigné, un logo "générique" est utilisez:
 
 
-
+ ![alt text](https://github.com/gcaugant56/Android-Studio-Covid19/blob/master/Global.png) 
 
 
 ---
