@@ -1,14 +1,54 @@
 ## Récuperation du repo
 
 git clone https://github.com/gcaugant56/Android-Studio-Covid19.git
+
 Ouvrir le projet dans Android studio (ne pas l'importé)
 
+## Consignes respectées
+- Architecture MVC
+- Appels REST
+- 2 ecrans, un pour une liste l'autre pour des details
+- Affichage d'une liste dans un RecyclerView
+- Affichage du détail d'un item de la liste
+- Gitflow
+- Utilisation de Thread
+- Données en cache
 ---
-## Installation
----
-## Dépendances
----
+
 ## Principe de fonctionnement
+
+Au démarrage l'application va demander l'accès a la géolocalisation du téléphone afin de proposer les statistiques du pays ou se trouve l'utilisateur: 
+
+
+
+
+
+
+Il est possible de validé que la permission a bien été accorder:
+
+
+
+
+
+Ensuite l'application va faire un appel serveur (https://covid19api.com/summary).
+Le serveur va nous réponse un json, une liste de pays et les statistiques liées au COVID (nombre de mort total, nouveau mort, guéri total, nouveau guéri, contaminé total, et guérie dans la journée).
+
+Nous allons donc arrivé sur cet écran : 
+
+
+
+Global stats correspond au statistique  mondial et Your location au statistique  du pays ou se trouve l'utilisateur. Sur l'appuie d'un des élément nous allons être rediriger vers un écran de détail : 
+
+
+
+
+
+Dans les cas ou nous choissisons globals stats ou un pays ou le drapeau n'est pas renseigné, un logo "générique" est utilisez:
+
+
+
+
+
 ---
 ## Version
 
