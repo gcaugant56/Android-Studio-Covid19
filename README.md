@@ -13,6 +13,8 @@ Ouvrir le projet dans Android studio (ne pas l'importé)
 - Gitflow
 - Utilisation de Thread
 - Données en cache
+- Tentative d'intégration continu 
+- Test unitaire
 ---
 
 ## Principe de fonctionnement
@@ -49,6 +51,11 @@ Dans les cas ou nous choissisons globals stats ou un pays ou le drapeau n'est pa
  ![alt text](https://github.com/gcaugant56/Android-Studio-Covid19/blob/master/Global.png) 
 
 
+---
+## Test unitaires
+---
+
+## Intégration continu
 ---
 ## Version
 
