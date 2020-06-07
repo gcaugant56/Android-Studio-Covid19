@@ -70,7 +70,8 @@ Dans les cas ou nous choissisons globals stats ou un pays ou le drapeau n'est pa
 
 ---
 ## Auteur
-**Caugant Guillaume** _alias_ [@gcaugant56](https://github.com/gcaugant56)
+
+- Caugant Guillaume [@gcaugant56](https://github.com/gcaugant56)
 ---
 ## Version
 
